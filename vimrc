@@ -70,13 +70,18 @@ inoremap kj <Esc>
 
 filetype plugin indent on
 syntax on
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
 
 set nu et ci pi sts=2 sw=2 ts=2
 set mouse=nicra "allows scrolling with mouse
-set mouse+=a
+"set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 set nowrap
 colorscheme elflord
 
 set incsearch hlsearch
+
+"To quickly copy word under the cursor into search
+nnoremap <Leader>s /<C-r><C-w>
