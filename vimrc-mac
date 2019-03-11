@@ -54,15 +54,15 @@ filetype plugin indent on    " required
 
 " Disable arrows to get used to hjkl
 " Normal, visual, select and operator modes (noremap)
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-noremap <Down> <NOP>
-noremap <Up> <NOP>
-" Insertion mode (inoremap)
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-inoremap <Down> <NOP>
-inoremap <Up> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
+"noremap <Down> <NOP>
+"noremap <Up> <NOP>
+"" Insertion mode (inoremap)
+"inoremap <Left> <NOP>
+"inoremap <Right> <NOP>
+"inoremap <Down> <NOP>
+"inoremap <Up> <NOP>
 
 " Escape with jk
 inoremap <Esc> <NOP>
@@ -88,3 +88,7 @@ set ruler
 
 "To quickly copy word under the cursor into search
 nnoremap <Leader>s /<C-r><C-w>
+
+
+"ctrlP settings
+let g:ctrlp_max_files=20000

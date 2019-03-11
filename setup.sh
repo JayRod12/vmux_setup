@@ -14,6 +14,10 @@ if [ -f ~/.gitconfig ]; then
   cp ~/.gitconfig ~/.gitconfig.old
 fi
 
+if [ -f ~/.zshrc ]; then
+  cp ~/.zshrc ~/.zshrc.old
+fi
+
 read -n1 -p "Are you on Linux [L/l] or Mac [M/m] ? " doit
 echo
 
@@ -28,11 +32,13 @@ set -g mouse-resize-pane on
 set -g mouse-utf on
 EOL
     cp vimrc-linux ~/.vimrc 
+    cp zshrc-linux ~/.zhsrc
     ;;
   M|m)
     echo "Copying Mac configurations for Vim and Tmux.."
     echo "set -g mouse on" > ~/.tmux.conf
     cp vimrc-mac ~/.vimrc
+    cp zshrc-mac ~/.zshrc
     ;;
   *)
     echo "Sorry, there are only configs for Linux and Mac."
